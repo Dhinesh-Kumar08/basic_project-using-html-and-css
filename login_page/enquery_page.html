@@ -5,11 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Enquery page</title>
     <link rel="stylesheet" href="style(enquery).css">
+
 </head>
 <body>
     <div class="container">
         <form name="submit-to-google-sheet">
-            <h3>GET IN TOUCH</h3>
+            <h3>Contact Me</h3>
             <input type="text" id="name" placeholder="Your Name" required>
             <input type="email" id="email" placeholder="Email id" required>
             <!--*<input type="text" id="phone" placeholder="Phone no." required>-->
@@ -19,10 +20,9 @@
         </form>
     </div>
     <script>
-        const scriptURL = 'https://script.google.com/macros/s/AKfycbyEMvJrf1k2ridQRG-Z8cwX97uzDiYOQ9YVDW7TL8PCTbKpi_tzFrC7h4s53UY0016wxg/exec'
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbwTRC0UZEkO3YShzwwxwvEtUhipBxt9PC46ZHAS9y3NdzlOvXURjn8yOBn6XiIx7Jizgg/exec'
         const form = document.forms['submit-to-google-sheet']
         const msg =document.getElementById("msg")
-
         form.addEventListener('submit', e => {
         e.preventDefault()
         fetch(scriptURL, { method: 'POST', body: new FormData(form)})
