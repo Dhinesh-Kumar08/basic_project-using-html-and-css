@@ -4,7 +4,7 @@ function sendOTP() {
 
     let otp_val = Math.floor(Math.random() * 10000);
 
-    let emailbody =`<h2>Your OTP is </h2>${otp_val}`;
+    let emailbody =`<h1>Your OTP is </h1>${otp_val}`;
     Email.send({
         SecureToken :"1083d43c-d6c4-4b71-bb1c-a4ce5abf392c",
         To : email.value,
@@ -21,7 +21,7 @@ function sendOTP() {
             const otp_inp = document.getElementById('otp_inp');
             const otp_btn = document.getElementById('otp-btn');
 
-            otp_btn.addEventListener('click', () =>{
+            otp_btn.addEventListener('click', () => {
                 if (otp_inp.value == otp_val) {
                     alert("Email address verified...");
                 }
